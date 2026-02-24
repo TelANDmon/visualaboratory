@@ -1,16 +1,16 @@
-interface User{
+ interface User{
     id: number;
     name: string;
     email?: string;
     isActive: boolean;
 }
 
-function createUser(useriD: number, userName: string, email: string, isAct:boolean): User{
+export function createUser(useriD: number, userName: string, isAct:boolean, email?: string): User{
     return{id: useriD, name: userName, email: email, isActive: isAct}
 }
 
-let user1 = createUser(10,"Bob","bobemail",true);
-let user2= createUser(10,"ALBERT","",false);
+let user1 = createUser(10,"Bob",true,"bobemail");
+let user2= createUser(10,"ALBERT",false,"");
 
 console.log(user1);
 console.log(user2);
@@ -19,7 +19,7 @@ console.log(user2);
 ///////////////////////////////////////////////////////////
 
 type Genre = "fiction" | "non-fiction";
-interface Book{
+export interface Book{
     title: string;
     author: string;
     year?: number;
@@ -27,18 +27,17 @@ interface Book{
 
 }
 
-function createBook(book: Book): Book{
+export function createBook(book: Book): Book{
     return book;
 }
 
 
-function printBook(book: Book) : void {
+export function printBook(book: Book) : void {
     console.log(`Title: ${book.title}`);
     console.log(`Author: ${book.author}`);
     console.log(`Year: ${book.year}`);
     console.log(`Genre: ${book.genre}`);
 }
-
 let book1: Book = {
     title: "DOTA2LOR",
     author: "PIDIDI",
@@ -52,18 +51,19 @@ let book2: Book = {
     year: 2022,
 }
 
-console.log("book1");
-printBook(book1);
+const knizka1 = createBook(book1);
+console.log("hz");
+printBook(knizka1);
 
 console.log("book2");
 printBook(book2);
 
 ////////////////////////////////////////////////////////////////
 
-function calculateArea(shape: "circle", param: {radius:number}) : number;
-function calculateArea(shape : "square", param: {side:number}): number;
+export function calculateArea(shape: "circle", param: {radius:number}) : number;
+export function calculateArea(shape : "square", param: {side:number}): number;
 
-function calculateArea(shape: "circle" | "square", param:{ radius?: number; side?: number}) :number{
+export function calculateArea(shape: "circle" | "square", param:{ radius?: number; side?: number}) :number{
     if (shape == "circle"){
         const r = param.radius?? 0;
         return 3.14 * r**2;
@@ -83,9 +83,9 @@ console.log(calculateArea("square",{side: 10}));
 /////////////////////////////////////////////////////////////////////////////
 
 
-type Status = "active" | "inactive" | "new";
+export type Status = "active" | "inactive" | "new";
 
-function getStatusColor(Status: Status): string{
+export function getStatusColor(Status: Status): string{
     if(Status == "active"){
         return "green";
     }
@@ -104,20 +104,20 @@ console.log(getStatusColor("new"));
 
 ///////////////////////////////////////////////////////////////////////////////////////
 
-type StringFormatter = (value: string, uppercase?: boolean) =>string;
-const upperFirst: StringFormatter = (value, uppercase = false) => {
+export type StringFormatter = (value: string, uppercase?: boolean) =>string;
+export const upperFirst: StringFormatter = (value, uppercase = false) => {
     if(!value){
         return ""; 
     }
 
     let s = value[0]?.toUpperCase()+value.slice(1);
     if(uppercase==true){
-        let s = value.toUpperCase();
+       s = value.toUpperCase();
     }
     return s;
 }
 
-const spaceDelete: StringFormatter = (value, uppercase = false) => {
+export const spaceDelete: StringFormatter = (value, uppercase = false) => {
     if(!value){
         return "";
     }
@@ -125,19 +125,22 @@ const spaceDelete: StringFormatter = (value, uppercase = false) => {
     let s = value.trim();
 
     if(uppercase == true){
-         s = value.toUpperCase();
+         s = s.toUpperCase();
     }
     return s;
 }
 
-console.log(spaceDelete("chto pisat ",true));
-console.log(upperFirst("chto pisat",false));
+let stroka1 = "     chto pisat"
+let stroka2 = "ya ne znayu"
+
+console.log(spaceDelete(stroka1,true));
+console.log(upperFirst(stroka2, true));
 
 
 /////////////////////////////////////////////////////////////
 
 
-function getFirstElement<T>(arr: T[]): T | undefined {
+export function getFirstElement<T>(arr: T[]): T | undefined {
     return arr.length>0 ? arr[0] : undefined;
 }
 
@@ -148,7 +151,7 @@ console.log(getFirstElement(massive2));
 
 ////////////////////////////////////////////////////////////////////
 
-interface HasId{
+export interface HasId{
     id: number;
 }
 
@@ -159,7 +162,7 @@ let obj: HasId[] = [
 ]
 
 
-function findById<T extends HasId>(items: T[], id: number): T | undefined{
+export function findById<T extends HasId>(items: T[], id: number): T | undefined{
     for(const item of items){
         if(item.id === id){
             return item;
@@ -169,3 +172,5 @@ function findById<T extends HasId>(items: T[], id: number): T | undefined{
 }
 
 console.log(findById(obj,2));
+
+
