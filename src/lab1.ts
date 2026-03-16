@@ -60,11 +60,11 @@ printBook(book2);
 
 ////////////////////////////////////////////////////////////////
 
-export function calculateArea(shape: "circle", param: {radius:number}) : number;
-export function calculateArea(shape : "square", param: {side:number}): number;
+export function calculateArea(shape: "circle", param: {radius?:number}) : number;
+export function calculateArea(shape : "square", param: {side?:number}): number;
 
 export function calculateArea(shape: "circle" | "square", param:{ radius?: number; side?: number}) :number{
-    if (shape == "circle"){
+    if (shape === "circle"){
         const r = param.radius?? 0;
         return 3.14 * r**2;
     }

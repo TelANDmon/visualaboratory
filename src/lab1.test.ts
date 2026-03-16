@@ -74,6 +74,10 @@ describe("проверка вывода первого элемента масс
         let numberarray: number [] = [1,2,3];
         expect(getFirstElement(numberarray))
     })
+    it("проверка undefined", () => {
+        let arrayn: number [] = []
+        expect(getFirstElement(arrayn)).toBeUndefined
+    })
 })
 
 describe("проверка нахождения элемента по id", () => {
