@@ -11,6 +11,6 @@
     "declaration": true,
     "declarationMap": true,
   },
-  "include": ["*.ts"],
+  "include": ["*.ts", "src/lab1.ts", "src/lab1.test.ts", "dist/lab1.d.ts", "dist/lab1.test.d.ts"],
   "exclude": ["node_modules"]
 }

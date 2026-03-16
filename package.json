@@ -5,7 +5,7 @@
   "description": "Первое практическое задание",
   "main": "lab1.ts",
   "scripts": {
-    "dev": "tsx lab1.ts",
+    "dev": "tsx src/lab1.ts",
     "test": "vitest",
     "coverage": "vitest run --coverage"
   },
