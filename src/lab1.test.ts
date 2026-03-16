@@ -35,7 +35,7 @@ describe("создать круг или квадрат и высчитать п
         expect(area).toBeCloseTo(SquareS,2);
     })
     it("нулевое значение", () => {
-        const area = calculateArea("circle",{radius: 0})
+        const area = calculateArea("circle",{})
         expect(area).toBe(0)
     })
 })
@@ -58,6 +58,10 @@ describe("проверка функций строк(удаление пробе
     })
     it("SpaceDelete", () => {
         expect(spaceDelete("              nepon",false)).toBe("nepon")
+    })
+    it("проверка на пустое", () => {
+        expect(spaceDelete("",false)).toBe("")
+        expect(upperFirst("",false)).toBe("")
     })
 })
 

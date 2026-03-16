@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1773652363151" clover="3.2.0">
-  <project timestamp="1773652363151" name="All files">
-    <metrics statements="63" coveredstatements="61" conditionals="24" coveredconditionals="18" methods="9" coveredmethods="9" elements="96" coveredelements="88" complexity="0" loc="63" ncloc="63" packages="1" files="1" classes="1"/>
+<coverage generated="1773652962168" clover="3.2.0">
+  <project timestamp="1773652962169" name="All files">
+    <metrics statements="63" coveredstatements="63" conditionals="24" coveredconditionals="21" methods="9" coveredmethods="9" elements="96" coveredelements="93" complexity="0" loc="63" ncloc="63" packages="1" files="1" classes="1"/>
     <file name="lab1.ts" path="D:\VISUALKURS\visualaboratory\src\lab1.ts">
-      <metrics statements="63" coveredstatements="61" conditionals="24" coveredconditionals="18" methods="9" coveredmethods="9"/>
+      <metrics statements="63" coveredstatements="63" conditionals="24" coveredconditionals="21" methods="9" coveredmethods="9"/>
       <line num="9" count="4" type="stmt"/>
       <line num="12" count="1" type="stmt"/>
       <line num="13" count="1" type="stmt"/>
@@ -39,15 +39,15 @@
       <line num="101" count="1" type="stmt"/>
       <line num="102" count="1" type="stmt"/>
       <line num="108" count="1" type="cond" truecount="1" falsecount="0"/>
-      <line num="109" count="2" type="cond" truecount="1" falsecount="1"/>
-      <line num="110" count="0" type="stmt"/>
+      <line num="109" count="3" type="cond" truecount="2" falsecount="0"/>
+      <line num="110" count="1" type="stmt"/>
       <line num="113" count="2" type="stmt"/>
-      <line num="114" count="2" type="cond" truecount="1" falsecount="1"/>
+      <line num="114" count="3" type="cond" truecount="2" falsecount="0"/>
       <line num="115" count="2" type="stmt"/>
       <line num="117" count="2" type="stmt"/>
       <line num="120" count="1" type="cond" truecount="1" falsecount="0"/>
-      <line num="121" count="2" type="cond" truecount="1" falsecount="1"/>
-      <line num="122" count="0" type="stmt"/>
+      <line num="121" count="3" type="cond" truecount="2" falsecount="0"/>
+      <line num="122" count="1" type="stmt"/>
       <line num="125" count="2" type="stmt"/>
       <line num="127" count="2" type="cond" truecount="2" falsecount="0"/>
       <line num="128" count="1" type="stmt"/>
