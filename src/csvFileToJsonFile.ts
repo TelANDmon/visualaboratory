@@ -4,7 +4,7 @@ import { readFile, writeFile }  from "node:fs/promises"
 export async function formatCsvFileToJsonFile(input: string, output: string, delimiter: string): Promise<void> {
     try{
         if(!input || !output){
-            throw new Error("ошибочка")
+            throw new Error("ошибочка пустого значения")
         }
         const csvstring = await readFile(input,'utf-8')
         const rows = csvstring.trim().split('\n')
@@ -17,7 +17,7 @@ export async function formatCsvFileToJsonFile(input: string, output: string, del
                 throw new Error("ошибка чтения файла")
             }
             if(error.message.includes("EACESS")){
-                throw new Error("ошибка прав на запись в файл")
+                throw new Error("ошибка на запись в файл")
             }
         }
         throw error;

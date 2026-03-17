@@ -1,19 +1,19 @@
-  {
+{
     "name": "visualaboratory",
     "type": "module",
     "version": "1.0.0",
     "description": "практическое задание",
     "main": "main.ts",
     "scripts": {
-      "dev": "tsx main.ts",
-      "test": "vitest",
-      "coverage": "vitest run --coverage"
+        "dev": "tsx src/main.ts",
+        "test": "vitest",
+        "coverage": "vitest run --coverage"
     },
     "devDependencies": {
-      "@vitest/coverage-v8": "^4.0.18",
-      "node": "^25.6.1",
-      "tsx": "^4.21.0",
-      "typescript": "^5.9.3",
-      "vitest": "^4.0.18"
+        "@vitest/coverage-v8": "^4.1.0",
+        "node": "^25.6.1",
+        "tsx": "^4.21.0",
+        "typescript": "^5.9.3",
+        "vitest": "^4.0.18"
     }
-  }
+}
